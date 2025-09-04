@@ -335,7 +335,7 @@ const Contact: React.FC = () => {
               {/* Additional Info */}
               <div className="mt-8 p-4 bg-dark-700/50 rounded-lg">
                 <p className="text-gray-300 text-sm text-center">
-                  📧 Typically respond within 24 hours • 🌍 Available for remote work
+                  📧 Typically respond within 24 hours
                 </p>
               </div>
             </div>
