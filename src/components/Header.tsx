@@ -48,7 +48,7 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center py-4">
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="text-2xl font-bold gradient-text"
+            className="text-2xl font-bold gradient-text-enhanced"
           >
             Aditya Gupta
           </motion.div>
