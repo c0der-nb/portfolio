@@ -87,7 +87,7 @@ const Projects: React.FC = () => {
       longDescription: 'A modern, responsive portfolio website featuring smooth animations with Framer Motion, glassmorphism design, and optimized performance. Built with TypeScript for type safety.',
       image: '/api/placeholder/600/400',
       liveUrl: '#',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/c0der-nb/portfolio',
       technologies: ['React', 'TypeScript', 'Framer Motion', 'Tailwind CSS', 'Responsive Design'],
       features: [
         'Smooth Animations',
@@ -97,8 +97,8 @@ const Projects: React.FC = () => {
         'Performance Optimized',
         'TypeScript Integration'
       ],
-      date: 'Dec 2024',
-      status: 'ongoing',
+      date: 'Sep 2025',
+      status: 'completed',
       color: 'from-orange-500 to-red-500'
     },
     {
@@ -200,10 +200,11 @@ const Projects: React.FC = () => {
           {categories.map((category) => (
             <motion.button
               key={category.id}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ duration: 0.1 }}
               onClick={() => setFilter(category.id)}
-              className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+              className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-200 ${
                 filter === category.id
                   ? 'bg-gradient-to-r from-primary-500 to-purple-500 text-white shadow-lg'
                   : 'bg-dark-800 text-gray-400 hover:text-white hover:bg-dark-700'
@@ -216,21 +217,18 @@ const Projects: React.FC = () => {
         </motion.div>
 
         {/* Projects Grid */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={filter}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="grid md:grid-cols-2 gap-8"
-          >
+        <motion.div
+          className="grid md:grid-cols-2 gap-8"
+        >
+          <AnimatePresence>
             {filteredProjects.map((project) => (
               <motion.div
                 key={project.id}
-                layout
-                variants={itemVariants}
-                whileHover={{ y: -10 }}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.2, ease: "easeOut" }}
+                whileHover={{ y: -5, transition: { duration: 0.2 } }}
                 className="glass-effect rounded-2xl overflow-hidden group"
               >
                 {/* Project Image */}
@@ -308,9 +306,10 @@ const Projects: React.FC = () => {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="flex-1 bg-gradient-to-r from-primary-500 to-purple-500 text-white py-3 px-4 rounded-lg font-medium flex items-center justify-center gap-2 hover:shadow-lg transition-all"
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      transition={{ duration: 0.1 }}
+                      className="flex-1 bg-gradient-to-r from-primary-500 to-purple-500 text-white py-3 px-4 rounded-lg font-medium flex items-center justify-center gap-2 hover:shadow-lg transition-all duration-200"
                     >
                       <FiExternalLink size={18} />
                       Live Demo
@@ -319,9 +318,10 @@ const Projects: React.FC = () => {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="px-4 py-3 border-2 border-gray-600 text-gray-300 rounded-lg font-medium flex items-center justify-center gap-2 hover:border-primary-500 hover:text-primary-400 transition-all"
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      transition={{ duration: 0.1 }}
+                      className="px-4 py-3 border-2 border-gray-600 text-gray-300 rounded-lg font-medium flex items-center justify-center gap-2 hover:border-primary-500 hover:text-primary-400 transition-all duration-200"
                     >
                       <FiGithub size={18} />
                     </motion.a>
@@ -329,8 +329,8 @@ const Projects: React.FC = () => {
                 </div>
               </motion.div>
             ))}
-          </motion.div>
-        </AnimatePresence>
+          </AnimatePresence>
+        </motion.div>
 
         {/* Project Stats */}
         <motion.div
@@ -338,28 +338,32 @@ const Projects: React.FC = () => {
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           <motion.div
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.1 }}
             className="text-center"
           >
             <div className="text-3xl font-bold gradient-text mb-2">4+</div>
             <div className="text-gray-400">Projects Completed</div>
           </motion.div>
           <motion.div
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.1 }}
             className="text-center"
           >
             <div className="text-3xl font-bold gradient-text mb-2">10+</div>
             <div className="text-gray-400">Technologies Used</div>
           </motion.div>
           <motion.div
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.1 }}
             className="text-center"
           >
             <div className="text-3xl font-bold gradient-text mb-2">100%</div>
             <div className="text-gray-400">Responsive Design</div>
           </motion.div>
           <motion.div
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.1 }}
             className="text-center"
           >
             <div className="text-3xl font-bold gradient-text mb-2">24/7</div>
