@@ -17,7 +17,7 @@ const Experience: React.FC = () => {
       period: 'December 2024 - Present',
       description: 'Contributing to Google\'s Gemini LLM under Google DeepMind initiatives.',
       achievements: [
-        'Architected and developed scalable full-stack features using Node.js, Python (Flask), ReactJS, and TypeScript',
+        'Architected and developed scalable full-stack features using Node.js, Python (Flask), ReactJS, Angular and TypeScript',
         'Built robust APIs and backend services with Flask and Node.js, integrating seamlessly with frontend components',
         'Designed and implemented reusable, high performance UI components using ReactJS and TypeScript',
         'Deployed and maintained applications on AWS, optimizing infrastructure for performance and cost efficiency',
@@ -25,7 +25,7 @@ const Experience: React.FC = () => {
         'Led technical discussions, peer code reviews, and mentored new engineers',
         'Integrated CI/CD pipelines and ensured comprehensive testing coverage using Jest and Pytest'
       ],
-      technologies: ['Node.js', 'Python', 'Flask', 'ReactJS', 'TypeScript', 'AWS', 'Jest', 'Pytest'],
+      technologies: ['Node.js', 'Python', 'Flask', 'ReactJS', 'Angular', 'TypeScript', 'AWS', 'Jest', 'Pytest'],
       color: 'from-blue-500 to-purple-600'
     },
     {
@@ -40,13 +40,13 @@ const Experience: React.FC = () => {
         'Optimized the glue job performance by implementing multi-threading and batch processing',
         'Reduced the overall execution time for millions of patient records by 30-40%',
         'Refactored and restructured a python component to follow best practices and design patterns',
-        'Developed UI components in ReactJS and DB Schema in PostgreSQL',
+        'Developed UI components in Angular and DB Schema in PostgreSQL',
         'Proposed a successful migration of Yarn to Yarn PnP by doing a POC',
         'Migrating to Yarn PnP helped decrease the overall size of repository by 40%',
-        'Optimized the memory usage at client side in ReactJS by efficiently managing memory consumption',
+        'Optimized the memory usage at client side in Angular by efficiently managing memory consumption',
         'Written unit tests for UI in Jest and documented technical aspects on Confluence'
       ],
-      technologies: ['Python', 'ReactJS', 'PostgreSQL', 'AWS Glue', 'Jest', 'Yarn PnP'],
+      technologies: ['Python', 'Angular', 'PostgreSQL', 'AWS Glue', 'Jest', 'Yarn PnP'],
       color: 'from-green-500 to-teal-600'
     },
     {

@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
           <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Full Stack Software Engineer with 3.5 years of experience crafting 
             <span className="text-primary-400 font-semibold"> scalable applications </span>
-            using ReactJS, Python, TypeScript, and modern technologies
+            using ReactJS, Angular, Python, TypeScript, and modern technologies
           </p>
         </motion.div>
 
